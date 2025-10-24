@@ -82,3 +82,24 @@ footer{
     background-color: #aa0000;
     color: white;
 }
+
+.instructionsbox {
+  background-color: lightblue;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.centered-content-box ul,
+.centered-content-box p {
+    align-self: flex-start;
+}
+
+.wrapper {
+  text-align: left;
+}

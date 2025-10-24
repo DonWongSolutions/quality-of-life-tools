@@ -2,13 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home | QoLT</title>
+    <title>Apache Deployment | QoLT</title>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <img class="ApacheLogo" src="/static/image/img.png" alt="logo">
     <h1 class="HomePageTitle">Quality of Life Tools</h1>
     <h2 class="PageFunctionTitle">Apache Configuration Deployment Instructions</h2>
+    <div class="instructionsbox">
+        <h3>Prerequisites:</h3> <br>
+        <ul>
+            <li>Any text processing application (Nano recommended if you are using Linux)</li>
+            <li>(Obviously) Have Apache2 installed</li>
+            <li>Have sudo permission on your server</li>
+        </ul>
+        <h3>Steps:</h3>
+        <ul>
+            <li>1. Open the terminal and type <code>sudo nano /etc/apache2/sites-available/{YOUR DOMAIN NAME HERE}.conf</code></li>
+            <li>2. Copy and Paste the configuration you generated from the tool and press Ctrl+X to save.</li>
+            <li>2.5 (Optional) You can run <code>sudo apache2ctl configtest</code> to validate your configuration</li>
+            <li>3. Now run <code>sudo systemctl restart apache2</code> and your new configuration is now applied!</li>
+            <code class="formwarning">Note: the steps below are only if you need to generate your SSL Certificates (i.e. HTTPS is enabled). <br>if you don't need to do that, congrats! you have completed the tutorial!</code>
+            <li>4. Execute the following code: <code>sudo apt update</code> and <code>sudo apt install certbot python3-certbot-apache</code>.</li>
+            <li>5a. If this is your first time setting up SSL, you might want to run <code>sudo certbot --apache</code> and follow the guide. <br> Basically this will email you when your certificate is about to expire.</li>
+            <li>5b. If you prefer to just get the certificate, you can run <code>sudo certbot --apache -d {YOUR DOMAIN HERE}</code>. <br>This will generate your certificate and put them in the default directory /etc/letsencrypt/live/{YOUR DOMAIN}.</li>
+            <code class="formwarning">Note: You might need to update your configuration file according to the new location of your SSL files.</code>
+            <li>7. now, run <code>sudo systemctl restart apache2</code> and your SSL should now be working!</li>
+            <li>8. You have successfully completed this tutorial! Congrats!</li>
+        </ul>
+    </div>
 </body>
 <footer>
     <p class="Footer Text">Developed by Don Wong | Siege Week 8</p>
