@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Reverse Proxy | APCA</title>
+    <title>Apache Reverse Proxy | QoLT</title>
     <link rel="stylesheet" href="/static/css/style.css">
+    <script>
+         function goToInstructions() {
+            window.location.href = '/apache/deployment';
+        }
+    </script>
 </head>
 <body>
     <img class="ApacheLogo" src="/static/image/img.png" alt="logo">
@@ -66,11 +71,11 @@
 
             </code>
             <p>Instructions to deploy this configuration can be found here:</p>
-            <button class="VerifyButton" type="button" onclick="goToRProxy()">Click Me!</button>
+            <button class="VerifyButton" type="button" onclick="goToInstructions()">Click Me!</button>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../static/scripts/app.js"></script>
+    <script src="../static/scripts/reverseproxy.js"></script>
 </body>
 <footer>
     <p class="Footer Text">Developed by Don Wong | Siege Week 8</p>

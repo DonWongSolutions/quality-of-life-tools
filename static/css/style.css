@@ -40,6 +40,7 @@
 .SplitScreenRProxy{
     width: 100%;
     overflow: hidden;
+    padding-bottom: 50px;
 }
 .SplitRight {
     float: right;

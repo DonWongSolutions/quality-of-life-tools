@@ -11,7 +11,7 @@ $(document).ready(function() {
     // Using 'change' event specifically for select and checkbox
     $('#configForm input, #configForm select').on('input change', function() {
         $.ajax({
-            url: '/generate_preview',
+            url: '/preview_ssite',
             method: 'POST',
             data: $('#configForm').serialize(),
             success: function(response) {

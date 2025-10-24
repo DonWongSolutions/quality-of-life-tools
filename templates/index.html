@@ -2,23 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home | APCA</title>
+    <title>Home | QoLT</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <script>
         function goToRProxy() {
-            window.location.href = '/rproxy';
+            window.location.href = '/apache/rproxy';
+        }
+        function goToSSite() {
+            window.location.href = '/apache/ssite';
         }
     </script>
 </head>
 <body>
-    <img class="ApacheLogo" src="/static/image/img.png" alt="logo">
-    <h1 class="HomePageTitle">Apache Web Server Configuration Assistant</h1>
+    <!--<img class="ApacheLogo" src="/static/image/img.png" alt="logo">-->
+    <h1 class="HomePageTitle">Quality of Life Tools</h1>
     <h2 class="PageFunctionTitle">Home Page</h2>
     <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
         <div class="WelcomeDialogue">
-            <p class="PageDescription">Welcome to the Apache Web Server Configuration Assistant. <br> Please select your use case.</p>
+            <p class="PageDescription">Welcome to the Quality of Life Tools. <br> Please select your use case.</p>
             <button class="MenuButton" type="button" onclick="goToRProxy()">Create Reverse Proxy Configuration</button>
-            <button class="MenuButton" type="button">Create Site-Serving Configuration</button>
+            <button class="MenuButton" type="button" onclick="goToSSite()">Create Site-Serving Configuration</button>
         </div>
     </div>
 </body>
