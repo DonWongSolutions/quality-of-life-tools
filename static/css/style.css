@@ -1,0 +1,83 @@
+.HomePageTitle {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.ApacheLogo {
+    width: 10em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.MenuButton {
+    width: 200px;
+    height: 100px;
+    justify-content: center;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #aa0000;
+    color: white;
+}
+.MenuButton:hover {
+    background-color: #ff0000;
+    cursor: pointer;
+}
+.PageDescription {
+    font-size: 20px;
+}
+.PageFunctionTitle {
+    font-family: arial, sans-serif;
+    text-align: center;
+}
+.WelcomeDialogue{
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(225, 225, 225, 0.5);
+    width: fit-content;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+.SplitScreenRProxy{
+    width: 100%;
+    overflow: hidden;
+}
+.SplitRight {
+    float: right;
+    width: 49.75%;
+    background-color: lightcoral;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.SplitLeft {
+    float: left;
+    width: 49.75%;
+    background-color: lightblue;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html, body {
+    background-image: linear-gradient(to  right, yellow, #AA0000FF);
+}
+.formbreak{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.formwarning{
+    color: red;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+}
+.VerifyButton{
+    justify-content: center;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #aa0000;
+    color: white;
+}
