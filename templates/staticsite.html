@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apache Static Site | QoLT</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script>
+         function goToInstructions() {
+            window.location.href = '/apache/deployment';
+        }
+    </script>
+</head>
+<body>
+    <img class="ApacheLogo" src="/static/image/img.png" alt="logo">
+    <h1 class="HomePageTitle">Apache Web Server Configuration Assistant</h1>
+    <h2 class="PageFunctionTitle">Reverse Proxy Configuration</h2>
+    <p class="PageDescription">Please fill in the form below. A configuration file will be generated as you put in your information.</p>
+    <div class="SplitScreenRProxy">
+        <div class="SplitLeft">
+            <h2 class="SplitLeftTitle">Configuration</h2>
+            <p>Please input accurate information. No data will be stored on our servers.</p>
+            <form id="configForm">
+                <p class="formbreak">General Configurations</p>
+
+                <label for="port">Outbound Port</label>
+                <select id="port" name="port">
+                    <option value="443">HTTPS</option>
+                    <option value="80">HTTP</option>
+                </select> <br>
+
+                <label for="serverName">Server Address:</label>
+                <input type="text" id="serverName" name="serverName"><br>
+
+                <label for="serverAdmin">Server Admin Email</label>
+                <input type="email" id="serverAdmin" name="serverAdmin"><br>
+
+                <label for="localport">RootDocument Location</label>
+                <input type="text" id="rootlocation" name="rootlocation"><br>
+
+                <p class="formbreak">SSL Configurations</p>
+
+                <label for="SSLFile">Path to SSL Certificate Public File:</label>
+                <input type="text" id="SSLFile" name="SSLFile"><br>
+
+                <label for="SSLKey">Path to SSL Certificate Key File:</label>
+                <input type="text" id="SSLKey" name="SSLKey"><br>
+                <code class="formwarning">Note: Let's Encrypt is Recommended!</code> <br>
+
+                <p class="formbreak">Logs Configurations</p>
+
+                <label for="errlogname">Error Log Name:</label>
+                <input type="text" id="errlogname" name="errlogname"><br>
+
+                <label for="accesslogname">Access Log Name:</label>
+                <input type="text" id="accesslogname" name="accesslogname"><br>
+                <code class="formwarning">Note: It is Recommended that you set the log names as your web address for easier identification of which log is which.</code> <br>
+
+                <p class="formbreak">Misc Configurations</p>
+
+                <label><input type="checkbox" name="httpredirection" id="httpredirection"> Enable HTTP > HTTPS Redirection:</label><br>
+                <code class="formwarning">Note: Only enable this if you chose "HTTPS" as your outbound port!</code> <br>
+
+                <p class="formbreak">Static Site Configurations</p>
+                <label><input type="checkbox" name="ssiteconf" id="ssiteconf"> Enable Static Site Configuration:</label><br>
+                <code class="formwarning">Note: This must be enabled if you have put something into any of the below boxes.</code> <br>
+
+                <label for="allowoverrideoption">Allow Override:</label>
+                <select id="allowoverrideoption" name="allowoverrideoption">
+                    <option value="None">None</option>
+                    <option value="All">All</option>
+                    <option value="Options">Options (input in the box below)</option>
+                </select> <br>
+                <label for="optiontext">Options:</label>
+                <input type="text" id="optiontext" name="optiontext"><br>
+                <code class="formwarning">Note: Only put something inside of you selected "Options" in the dropdown above. Options are to be seperated by commas and started with a "=".</code> <br>
+            </form>
+            <button class="VerifyButton" type="button" onclick="goToRProxy()">Verify Configuration</button>
+            <code class="formwarning">Note: I plan to achieve this via the Hack Club AI (ai.hackclub.com), but it is currently down.</code> <br>
+        </div>
+        <div class="SplitRight">
+            <h2 class="SplitRightTitle">Live Preview</h2>
+            <p>The configuration will only be valid once you have filled in the whole form.</p>
+            <code id="livePreview">
+
+            </code>
+            <p>Instructions to deploy this configuration can be found here:</p>
+            <button class="VerifyButton" type="button" onclick="goToInstructions()">Click Me!</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../static/scripts/staticsite.js"></script>
+</body>
+<footer>
+    <p class="Footer Text">Developed by Don Wong | Siege Week 8 | <a href="/">Home</a></p>
+</footer>
+</html>
