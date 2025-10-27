@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apache Reverse Proxy | QoLT</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script>
+         function goToInstructions() {
+            window.location.href = '/apache/deployment';
+        }
+    </script>
+</head>
+<body>
+    <img class="ApacheLogo" src="/static/image/img.png" alt="logo">
+    <h1 class="HomePageTitle">Apache Web Server Configuration Assistant</h1>
+    <h2 class="PageFunctionTitle">Reverse Proxy Configuration</h2>
+    <p class="PageDescription">Please fill in the form below. A configuration file will be generated as you put in your information.</p>
+    <div class="SplitScreenRProxy">
+        <div class="SplitLeft">
+            <h2 class="SplitLeftTitle">Configuration</h2>
+            <p>Please input accurate information. No data will be stored on our servers.</p>
+            <form id="configForm">
+
+            </form>
+        </div>
+        <div class="SplitRight">
+            <h2 class="SplitRightTitle">Live Preview</h2>
+            <p>The configuration will only be valid once you have filled in the whole form.</p>
+            <code id="livePreview">
+
+            </code>
+            <p>Instructions to deploy this configuration can be found here:</p>
+            <button class="VerifyButton" type="button" onclick="goToInstructions()">Click Me!</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../static/scripts/reverseproxy.js"></script>
+</body>
+<footer>
+    <p class="Footer Text">Developed by Don Wong | Siege Week 8 | <a href="/">Home</a></p>
+</footer>
+</html>

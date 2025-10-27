@@ -1,0 +1,42 @@
+.HomePageTitle {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.GitLogo {
+    width: 10em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.MenuButton {
+    width: 200px;
+    height: 100px;
+    justify-content: center;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #f05030;
+    color: white;
+    border-color: #3f2c00;
+}
+.MenuButton:hover {
+    background-color: #a51b00;
+    cursor: pointer;
+}
+.PageDescription {
+    font-size: 20px;
+}
+.PageFunctionTitle {
+    font-family: arial, sans-serif;
+    text-align: center;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html, body {
+    background-image: linear-gradient(to  right, #80ff00, #f05030);
+}

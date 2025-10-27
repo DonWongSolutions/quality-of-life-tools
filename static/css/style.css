@@ -58,22 +58,14 @@
     box-sizing: border-box;
     border-radius: 10px;
 }
-h1, h2, h3, h4, h5, h6, p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-html, body {
-    background-image: linear-gradient(to  right, yellow, #AA0000FF);
-}
+
 .formbreak{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .formwarning{
     color: red;
 }
-footer{
-    position: fixed;
-    bottom: 0;
-}
+
 .VerifyButton{
     justify-content: center;
     display: inline-block;
