@@ -2,13 +2,17 @@
 
 ---
 
+> [!IMPORTANT]  
+> The Demo is available here: https://wkydon.pythonanywhere.com
+
 # Quality of Life Tools
 This is a set of tools that (hopefully) will improve mine (and your) life of managing servers.
 
 ## Tools List:
 
 - Apache Web Server Configuration Creator
-- Proxmox Front End (Customer/Self-Service) Portal (API Credentials and a working Proxmox Host needed)
+- (Coming soon) .gitignore file Generator
+- (Coming soom) Password hasher / UUID Generator
 
 ## Installation
 
